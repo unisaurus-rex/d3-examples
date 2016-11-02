@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,35 +6,78 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>D3 Examples</title>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.css">
     <link rel="stylesheet" href="app.css">
   </head>
   <body>
-    <div class="content">
+    <div class="container">
       <div>
         <h2>D3 Selections</h2>
-        <h3 class="blue">Header 1 (h3)</h3>
-        <h3>Header 2 (h3) </h3>
-        <h3>Header 3 (h3) </h3>
-        <div>
-          <p>For a full reference on selections, see <a href="https://github.com/d3/d3-selection">here</a></p>
-          Some things to try:
-          <ol>
-            <li>Select the first h3 element using d3.select()</li>
-            <li>Select all of the h3 elements using d3.selectAll()</li>
-            <li>Add or remove the 'blue' css class to the h3 elemdents using selection.classed()</li>
-            <li>Add an attribute using selection.attr()</li>
-            <li>Change the text of a header element using selection.text()</li>
-            <li>Add a new header using selection.append()</li>
-            <li>Remove a header using selection.remove()</li>
-          </ol>
+        <div class="row">
+          <div class="column">
+            <p>Try using selections on the elements below. For a full reference on selections, see <a href="https://github.com/d3/d3-selection">here</a></p>
+
+            <div id="section1">
+              <h3 class="blue">Header 1 (h3)</h3>
+              <h3>Header 2 (h3) </h3>
+              <h3>Header 3 (h3) </h3>
+            </div>
+          </div>
+          <div class="column">
+            <strong>Some things to try: </strong>
+            <ol>
+              <li>Select the first h3 element using d3.select()</li>
+              <li>Select all of the h3 elements using d3.selectAll()</li>
+              <li>Add or remove the 'blue' css class to the h3 elemdents using selection.classed()</li>
+              <li>Add an attribute using selection.attr()</li>
+              <li>Change the text of a header element using selection.text()</li>
+              <li>Add a new header using selection.append()</li>
+              <li>Remove a header using selection.remove()</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <h2>D3 and SVG</h2>
+        <div class="row">
+          <div class="column">
+            <strong>Add SVG elements to the div on the right</strong>
+            <ol>
+              <li>Add an svg element to the div on the right with id = "section2"</li>
+              <li>Add a g element to the svg.  g elements are like divs for svg's</li>
+              <li>Add an svg shape of your choice to the g element</li>
+            </ol>
+          </div>
+          <div id="section2" class="column">
+            <h4>SVG goes in here</h4>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <h2>Binding Data</h2>
+        <div class="row">
+          <div class="column">
+            <ol>
+              <li>Add an svg element to the div on the right with id = "section3"</li>
+              <li>Add a g element to the svg element</li>
+              <li>This site includes data in a file name data.js Bind the dinosaurs array from data.js to some circle elements.  Make sure you put the circles inside the g element you created in the previous step</li>
+              <li>Let's work with data joins. Bind the circles from the previous step to the unicorns array. You'll need to use the enter and exit selections to make this work</li>
+              <!-- TODO: make the transitions a script -->
+              <li>Now try adding a transition. Re-bind the circles to the dinosaurs array and transition their radius</li>
+            </ol>
+          </div>
+          <div id="section3" class="column">
+            <h4>SVG goes here</h4>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.js"></script>
+    <script src="data.js"></script>
   </body>
 </html>
