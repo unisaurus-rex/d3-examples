@@ -1,6 +1,5 @@
-.content {
-    margin-left: 10%;
-    margin-right:10%;
+#section1 h3 {
+    text-align: center;
 }
 
 .blue {
@@ -17,3 +16,8 @@ hr {
     margin-bottom: 3.5rem;
     margin-top: 3rem;
 }
+
+svg {
+    border: 1px solid gray;
+}
+
